@@ -1,0 +1,19 @@
+// Kreiramo novi action
+
+import {GET_CONTACTS} from './types'
+
+
+export const getContacts = () => dispatch => {
+  dispatch({
+    type: GET_CONTACTS
+  })
+}
+
+
+export const getContacts = () => async dispatch => {
+  const res = await axios.get('api')
+  dispatch({
+    type: GET_CONTACTS,
+    payload: res.data
+  })
+}

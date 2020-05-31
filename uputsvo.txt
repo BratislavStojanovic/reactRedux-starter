@@ -1,0 +1,13 @@
+Kada hocemo da koristimo state u nekoj komponenti prvo moramo:
+
+1. import {connect} from 'react-redux'
+
+2. const mapStateToProps = state => ({
+ // contacts: state.contact.contacts
+})
+
+3. export default connect(mapStateToProps, {neki action creator})(neka komponenta)
+
+
+4. Kada hocemo da pristupimo, pristupamo sa
+this.props.[action kreator] 
